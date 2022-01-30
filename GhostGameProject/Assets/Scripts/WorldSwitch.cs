@@ -21,7 +21,7 @@ public class WorldSwitch : MonoBehaviour
         //watch for timer end. If it ends fade out the wipe.
             fadoutTime -= 1 * Time.deltaTime; 
             if (fadoutTime < 100) {
-                transform.Translate(-31, 0, 0); //Move to overworld
+                transform.Translate(-30, 0, 0); //Move to overworld
                 WipeObject.GetComponent<WipeController>().wipeUp = true; 
             }
         }
@@ -31,7 +31,7 @@ public class WorldSwitch : MonoBehaviour
             //watch for timer end. If it ends fade out the wipe.
             fadoutTime += 1 * Time.deltaTime;
             if (fadoutTime > 0) {
-                transform.Translate(31, 0, 0); //move to deathworld
+                transform.Translate(30, 0, 0); //move to deathworld
                 WipeObject.GetComponent<WipeController>().wipeUp = true; //fade out wipe
             }
         }
