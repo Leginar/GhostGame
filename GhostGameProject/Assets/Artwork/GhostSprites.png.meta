@@ -307,19 +307,19 @@ TextureImporter:
     second: Wall_GW_R_Middle
   - first:
       213: -4029186183963822154
-    second: GhostSprites_101
+    second: LifeArtifact
   - first:
       213: 1977046220542728808
-    second: GhostSprites_102
+    second: GhostOil
   - first:
       213: -7355061599958617398
-    second: GhostSprites_103
+    second: SafeZone_OW_1
   - first:
       213: -886977102313568117
-    second: GhostSprites_104
+    second: SafeZone_OW_2
   - first:
       213: -5804947289698144043
-    second: GhostSprites_105
+    second: SafeZone_OW_3
   - first:
       213: 1552571334712055393
     second: Wall_GW_L_Bottom
@@ -331,19 +331,49 @@ TextureImporter:
     second: Wall_GW_R_Bottom
   - first:
       213: -1438245743027669575
-    second: GhostSprites_109
+    second: SafeZone_OW_4
   - first:
       213: -2187911826015239816
-    second: GhostSprites_110
+    second: SafeZone_OW_5
   - first:
       213: 5622463833684606533
-    second: GhostSprites_111
+    second: SafeZone_OW_6
   - first:
       213: 2601835523805042790
-    second: GhostSprites_112
+    second: SafeZone_OW_7
   - first:
       213: -4183582177034727013
     second: GhostSprites_113
+  - first:
+      213: -8667609282131612467
+    second: SafeZone_OW_9
+  - first:
+      213: -7696646568825953881
+    second: SafeZone_GW_1
+  - first:
+      213: -9017997507203940190
+    second: SafeZone_GW_2
+  - first:
+      213: -5379862907242704163
+    second: SafeZone_GW_3
+  - first:
+      213: -7008641708951110862
+    second: SafeZone_GW_4
+  - first:
+      213: 5531630970775745461
+    second: SafeZone_GW_5
+  - first:
+      213: 6141267444964562983
+    second: SafeZone_GW_6
+  - first:
+      213: 1365121264691108705
+    second: SafeZone_GW_7
+  - first:
+      213: -7812106365745937846
+    second: SafeZone_GW_8
+  - first:
+      213: -6822371071913119781
+    second: SafeZone_GW_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -794,7 +824,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 127
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -2604,7 +2634,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2612,6 +2642,426 @@ TextureImporter:
       bones: []
       spriteID: 4ced4fdecfdcd17f0800000000000000
       internalID: -640129085809041724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeArtifact
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7bce263847518c0800000000000000
+      internalID: -4029186183963822154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostOil
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a5aff0011ef6b10800000000000000
+      internalID: 1977046220542728808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_OW_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2b95191729de990800000000000000
+      internalID: -7355061599958617398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_OW_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88c1bc5603d0b3f0800000000000000
+      internalID: -886977102313568117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_OW_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0fca9223fa07fa0800000000000000
+      internalID: -5804947289698144043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_OW_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b53e1bed135a0ce0800000000000000
+      internalID: -1438245743027669575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_OW_5
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8714c7a49c9f2a1e0800000000000000
+      internalID: -2187911826015239816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_OW_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e70415111070e40800000000000000
+      internalID: 5622463833684606533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_OW_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6685460bf939b1420800000000000000
+      internalID: 2601835523805042790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GhostSprites_113
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b919031fc2ee0f5c0800000000000000
+      internalID: -4183582177034727013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_OW_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccaaa6e74776b780800000000000000
+      internalID: -8667609282131612467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_GW_1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1666769b4003590800000000000000
+      internalID: -7696646568825953881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_GW_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a040cdeb03a9d280800000000000000
+      internalID: -9017997507203940190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_GW_3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd29f798033e655b0800000000000000
+      internalID: -5379862907242704163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_GW_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b7bf3cf7d4cbe90800000000000000
+      internalID: -7008641708951110862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_GW_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b333a16f0d44cc40800000000000000
+      internalID: 5531630970775745461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_GW_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72898cf043a2a3550800000000000000
+      internalID: 6141267444964562983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_GW_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bde39be82e1f210800000000000000
+      internalID: 1365121264691108705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_GW_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42452296a2d59390800000000000000
+      internalID: -7812106365745937846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SafeZone_GW_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfa7b418a11251a0800000000000000
+      internalID: -6822371071913119781
       vertices: []
       indices: 
       edges: []
