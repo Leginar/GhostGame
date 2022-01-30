@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2305000143323106730}
   - component: {fileID: 8551778742273781967}
+  - component: {fileID: -4265258692511123781}
   m_Layer: 0
   m_Name: Corpse
   m_TagString: Untagged
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4265258692511123781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347470383903254152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac05f4fa51fbee4ca0ebceef3b43d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
