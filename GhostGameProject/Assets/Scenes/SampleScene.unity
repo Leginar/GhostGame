@@ -21322,7 +21322,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 279
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -21986,6 +21986,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1058473004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 452448704709703160, guid: 70092ee126e145a4eba4940d4980b5ad, type: 3}
+  m_PrefabInstance: {fileID: 452448705894723686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!68 &1058473005
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058473004}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.96325696, y: -1.9343723}
+  - {x: 0.89895403, y: -2.8753307}
+  - {x: -0.87710035, y: -2.8591146}
+  - {x: -0.9594493, y: -1.9321706}
+  - {x: -0.9352644, y: 2.1226604}
+  - {x: -0.045934618, y: 3.0614924}
+  - {x: 0.93467873, y: 2.024713}
+  - {x: 0.953855, y: -1.9842257}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!213 &1167301891
 Sprite:
   m_ObjectHideFlags: 0
@@ -22460,6 +22493,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3011910089565511915, guid: db9cab9e6e5d0e84daecc03341edfc27, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011910089565511915, guid: db9cab9e6e5d0e84daecc03341edfc27, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -22574,7 +22611,7 @@ GameObject:
   - component: {fileID: 1539211305}
   - component: {fileID: 1539211304}
   - component: {fileID: 1539211306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap_Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24258,7 +24295,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f60eae05f43d05a46876ca48d6dffd95, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 160
-    m_Data: {fileID: -640129085809041724, guid: a2c6e7f5150be4a49972bf70d3540761, type: 3}
+    m_Data: {fileID: 127092122106515158, guid: a2c6e7f5150be4a49972bf70d3540761, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 160
     m_Data:
@@ -24284,8 +24321,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -10, y: -20, z: 0}
-  m_Size: {x: 52, y: 40, z: 1}
+  m_Origin: {x: -19, y: -23, z: 0}
+  m_Size: {x: 72, y: 48, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -24377,7 +24414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1980029851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Train
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31447,6 +31484,10 @@ PrefabInstance:
     - target: {fileID: 452448704709703160, guid: 70092ee126e145a4eba4940d4980b5ad, type: 3}
       propertyPath: m_Name
       value: TrainSprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 452448704709703160, guid: 70092ee126e145a4eba4940d4980b5ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70092ee126e145a4eba4940d4980b5ad, type: 3}
