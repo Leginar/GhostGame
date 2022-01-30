@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public ContactFilter2D filter;
     private BoxCollider2D boxCollider;
     public BoxCollider2D grabCollider;
-    public UIScript ui;
+    public GameObject ui;
     private Collider2D[] hits = new Collider2D[10];
 
 
@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        ui = GetComponent<UIScript>();
         boxCollider = GetComponent<BoxCollider2D>();
         thisRenderer = GetComponent<SpriteRenderer>();
     }
@@ -75,7 +74,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButton("Fire2") && transitionState == 0 && world == 2 && talismans > 0)
         {
-            ui.NumbTalisman--;
+            ui.GetComponent<UIScript>().NumbTalisman--;
             talismans--;
             transitionState = 2;
             stateTimer = 101.2f;
@@ -172,19 +171,19 @@ public class Player : MonoBehaviour
 
             //CHECK FOR DAMAGE
             if (hits[i].tag == "Oil") { 
-                Debug.Log("You got Oil"); 
-                hits[i].gameObject.GetComponent<CollectableItem>().Collect(); 
+                Debug.Log("You got Oil");
+                Object.Destroy(hits[i].gameObject);
             }
 
             if (hits[i].tag == "Ghost") {
-                ui.NumbGhosts++;
-                hits[i].gameObject.GetComponent<CollectableItem>().Collect();
+                ui.GetComponent<UIScript>().NumbGhosts++;
+                Object.Destroy(hits[i].gameObject);
             }
             
             if (hits[i].tag == "Talisman") {
-                ui.NumbTalisman++;
                 talismans++;
-                hits[i].gameObject.GetComponent<CollectableItem>().Collect(); 
+                ui.GetComponent<UIScript>().NumbTalisman = talismans;
+                Object.Destroy(hits[i].gameObject);
             }
             
             if (hits[i].tag == "Hurt") { 
