@@ -484,6 +484,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.13504803
       objectReference: {fileID: 0}
+    - target: {fileID: 3011910089565511911, guid: db9cab9e6e5d0e84daecc03341edfc27, type: 3}
+      propertyPath: playerSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3011910089565511912, guid: db9cab9e6e5d0e84daecc03341edfc27, type: 3}
       propertyPath: m_Enabled
       value: 1

@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public int world = 1; //1 = overworld, 2 = deadworld
     public Sprite playerRear;
     public Sprite playerFront;
+    public float playerSpeed=1;
 
     public GameObject DeathParticleEffect;
     public GameObject ResParticleEffect;
@@ -132,19 +133,19 @@ public class Player : MonoBehaviour
 
 
             // Make sure we can move in this direction by casing a box there first, if the box hits something it returns a value
-            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Character", "Collision"));
+            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, playerSpeed * moveDelta.y), Mathf.Abs(playerSpeed * moveDelta.y * Time.deltaTime), LayerMask.GetMask("Character", "Collision"));
             if (hit.collider == null)
             {
                 //Make this thing move if no value is found
-                transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
+                transform.Translate(0, playerSpeed *  moveDelta.y * Time.deltaTime, 0);
             }
 
             // Make sure we can move in this direction by casing a box there first, if the box
-            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Character", "Collision"));
+            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(playerSpeed * moveDelta.x, 0), Mathf.Abs(playerSpeed * moveDelta.x * Time.deltaTime), LayerMask.GetMask("Character", "Collision"));
             if (hit.collider == null)
             {
                 //Make this thing move
-                transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
+                transform.Translate(playerSpeed*moveDelta.x * Time.deltaTime, 0, 0);
             }
 
         }
