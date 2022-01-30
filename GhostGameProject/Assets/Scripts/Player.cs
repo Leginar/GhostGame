@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -8,6 +9,7 @@ public class Player : MonoBehaviour
     public ContactFilter2D filter;
     private BoxCollider2D boxCollider;
     public BoxCollider2D grabCollider;
+    public UIScript ui;
     private Collider2D[] hits = new Collider2D[10];
 
 
@@ -25,8 +27,11 @@ public class Player : MonoBehaviour
     public GameObject Camera;
     public GameObject CorpseDrop;
 
+    public int talismans = 0;
+
     private void Start()
     {
+        ui = GetComponent<UIScript>();
         boxCollider = GetComponent<BoxCollider2D>();
         thisRenderer = GetComponent<SpriteRenderer>();
     }
@@ -68,8 +73,10 @@ public class Player : MonoBehaviour
 
         //check ressurect button
 
-        if (Input.GetButton("Fire2") && transitionState == 0 && world == 2)
+        if (Input.GetButton("Fire2") && transitionState == 0 && world == 2 && talismans > 0)
         {
+            ui.NumbTalisman--;
+            talismans--;
             transitionState = 2;
             stateTimer = 101.2f;
             GameObject tempParticle = Instantiate(ResParticleEffect);
@@ -169,17 +176,21 @@ public class Player : MonoBehaviour
                 hits[i].gameObject.GetComponent<CollectableItem>().Collect(); 
             }
 
-            if (hits[i].tag == "Ghost") { 
-                Debug.Log("A Ghost Follows You");
+            if (hits[i].tag == "Ghost") {
+                ui.NumbGhosts++;
                 hits[i].gameObject.GetComponent<CollectableItem>().Collect();
             }
             
-            if (hits[i].tag == "Talisman") { 
-                Debug.Log("You got a Talisman"); 
+            if (hits[i].tag == "Talisman") {
+                ui.NumbTalisman++;
+                talismans++;
                 hits[i].gameObject.GetComponent<CollectableItem>().Collect(); 
             }
             
-            if (hits[i].tag == "Hurt") { Die(); }
+            if (hits[i].tag == "Hurt") { 
+                Die(); 
+                if (transitionState == 0 && world == 2) { SceneManager.LoadScene(1);}
+            }
 
             //Clean array
             hits[i] = null;
