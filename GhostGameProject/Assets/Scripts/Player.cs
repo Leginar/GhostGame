@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public Sprite playerFront;
 
     public GameObject DeathParticleEffect;
+    public GameObject Camera;
     public GameObject CorpseDrop;
 
     private void Start()
@@ -37,8 +38,10 @@ public class Player : MonoBehaviour
             transitionState = 1;
             stateTimer = 1;
             Instantiate(DeathParticleEffect, transform);
-            Instantiate(CorpseDrop, transform);
-        }
+            GameObject tempCorpse = Instantiate(CorpseDrop);
+            tempCorpse.transform.position = transform.position;
+            Camera.GetComponent<WorldSwitch>().TeleportDeadworld();
+}
 
         //check ressurect button
 

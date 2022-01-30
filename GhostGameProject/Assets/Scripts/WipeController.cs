@@ -5,7 +5,7 @@ using UnityEngine;
 public class WipeController : MonoBehaviour
 {
 
-    public bool wipeUp = true;
+    public bool wipeUp;
     public float speed = 10;
 
     // Start is called before the first frame update
@@ -17,11 +17,11 @@ public class WipeController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (wipeUp = true && transform.position.y < 54)
+        if (wipeUp == true && transform.position.y < 54)
         {
             transform.Translate(0, + speed * Time.deltaTime, 0);
         }
-        if (wipeUp = false && transform.position.y > -10)
+        if (wipeUp == false && transform.position.y > -10)
         {
             transform.Translate(0, -speed * Time.deltaTime, 0);
         }
