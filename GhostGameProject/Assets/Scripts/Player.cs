@@ -164,14 +164,20 @@ public class Player : MonoBehaviour
                 continue;
 
             //CHECK FOR DAMAGE
-            if (hits[i].tag == "Oil") { Debug.Log("You got Oil"); }
+            if (hits[i].tag == "Oil") { 
+                Debug.Log("You got Oil"); 
+                hits[i].gameObject.GetComponent<CollectableItem>().Collect(); 
+            }
 
             if (hits[i].tag == "Ghost") { 
                 Debug.Log("A Ghost Follows You");
                 hits[i].gameObject.GetComponent<CollectableItem>().Collect();
             }
             
-            if (hits[i].tag == "Talisman") { Debug.Log("You got a Talisman"); }
+            if (hits[i].tag == "Talisman") { 
+                Debug.Log("You got a Talisman"); 
+                hits[i].gameObject.GetComponent<CollectableItem>().Collect(); 
+            }
             
             if (hits[i].tag == "Hurt") { Die(); }
 
