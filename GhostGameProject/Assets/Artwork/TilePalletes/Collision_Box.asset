@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Collision_Box
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -640129085809041724, guid: a2c6e7f5150be4a49972bf70d3540761, type: 3}
+  m_Sprite: {fileID: 127092122106515158, guid: a2c6e7f5150be4a49972bf70d3540761, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

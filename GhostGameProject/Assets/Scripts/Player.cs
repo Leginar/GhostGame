@@ -27,11 +27,17 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
         //Reset MoveDelta
         moveDelta = new Vector3(x, y, 0);
+
+        //Collision
+        //hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Character", "Collision"));
+        //if (hit.collider == null)
 
         //check death button
 
@@ -119,7 +125,7 @@ public class Player : MonoBehaviour
 
 
             // Make sure we can move in this direction by casing a box there first, if the box
-            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Character", "Collision"));
             if (hit.collider == null)
             {
                 //Make this thing move
@@ -127,7 +133,7 @@ public class Player : MonoBehaviour
             }
 
             // Make sure we can move in this direction by casing a box there first, if the box
-            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+            hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Character", "Collision"));
             if (hit.collider == null)
             {
                 //Make this thing move
