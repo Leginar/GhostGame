@@ -22376,6 +22376,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1347470383903254152, guid: fc43859f0412ee44eb562f5640a6128c, type: 3}
     - target: {fileID: 3011910089565511911, guid: db9cab9e6e5d0e84daecc03341edfc27, type: 3}
+      propertyPath: ResParticleEffect
+      value: 
+      objectReference: {fileID: 2792448478709005283, guid: 8edc82c33c6b90d40b59287972e80947, type: 3}
+    - target: {fileID: 3011910089565511911, guid: db9cab9e6e5d0e84daecc03341edfc27, type: 3}
       propertyPath: DeathParticleEffect
       value: 
       objectReference: {fileID: 4880436589849035713, guid: 54a682542915efe489d35cbad551a931, type: 3}

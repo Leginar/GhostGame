@@ -8,12 +8,14 @@ public class Player : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Vector3 moveDelta;
     private RaycastHit2D hit;
-    public float stateTimer = 0;
+    public float stateTimer = 0; // < 0 = moving to death.  > 100 fading to overworld
     private int transitionState = 0;// 0 = no state, 1 = Dying, 2 = Ressurecting
+    public int world = 1; //1 = overworld, 2 = deadworld
     public Sprite playerRear;
     public Sprite playerFront;
 
     public GameObject DeathParticleEffect;
+    public GameObject ResParticleEffect;
     public GameObject Camera;
     public GameObject CorpseDrop;
 
@@ -33,29 +35,59 @@ public class Player : MonoBehaviour
 
         //check death button
 
-        if (Input.GetButton("Fire1") && transitionState == 0)
+        if (Input.GetButton("Fire1") && transitionState == 0 && world == 1)
         {
             transitionState = 1;
-            stateTimer = 1;
-            Instantiate(DeathParticleEffect, transform);
+            stateTimer = -1;
+            GameObject tempParticle = Instantiate(DeathParticleEffect);
+            tempParticle.transform.position = transform.position;
             GameObject tempCorpse = Instantiate(CorpseDrop);
             tempCorpse.transform.position = transform.position;
             Camera.GetComponent<WorldSwitch>().TeleportDeadworld();
-}
+            transform.Translate(+30, 0, 0);
+        }
 
         //check ressurect button
 
-        if (Input.GetButton("Fire2") && transitionState == 0)
+        if (Input.GetButton("Fire2") && transitionState == 0 && world == 2)
         {
             transitionState = 2;
-            stateTimer = 1;
+            stateTimer = 101.2f;
+            GameObject tempParticle = Instantiate(ResParticleEffect);
+            tempParticle.transform.position = transform.position;
+            Camera.GetComponent<WorldSwitch>().TeleportOverworld();
+            GameObject tempParticle2 = Instantiate(ResParticleEffect);
+            tempParticle2.transform.position = new Vector3(transform.position.x-30, transform.position.y, transform.position.z);
+
         }
 
-        if (transitionState > 0 && stateTimer < 0) { transitionState = 0; }
+   
+
+        if (transitionState > 0 && stateTimer > 0  && stateTimer < 100) { transitionState = 0; }
 
         //reduce the stateTimer;
 
-        if (stateTimer > 0) { stateTimer -= 1 * Time.deltaTime;  }
+        if (stateTimer > 100)
+        { //fading to overworld timer
+            stateTimer -= 1 * Time.deltaTime;
+            if (stateTimer <= 100) {
+                
+                world = 1; //arriving in overworld
+                transform.Translate(-30, 0, 0);
+
+            }
+
+            } 
+
+        if (stateTimer < 0)
+        { //fading to death timer
+            stateTimer += 1 * Time.deltaTime;
+            if (stateTimer >= 0) 
+            {
+               
+                world = 2; //arriving in death
+            }
+        } 
 
 
 
