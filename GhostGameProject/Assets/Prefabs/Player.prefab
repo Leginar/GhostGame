@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 3011910089565511912}
   - component: {fileID: 3011910089565511911}
   - component: {fileID: 3011910089565511910}
+  - component: {fileID: 622796318}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -168,11 +169,12 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  grabCollider: {fileID: 1754191785}
   stateTimer: 0
   world: 1
   playerRear: {fileID: 3357563261780280606, guid: a2c6e7f5150be4a49972bf70d3540761, type: 3}
   playerFront: {fileID: -5637872049706641745, guid: a2c6e7f5150be4a49972bf70d3540761, type: 3}
-  playerSpeed: 3
+  playerSpeed: 6
   DeathParticleEffect: {fileID: 4880436589849035713, guid: 54a682542915efe489d35cbad551a931, type: 3}
   ResParticleEffect: {fileID: 2792448478709005283, guid: 8edc82c33c6b90d40b59287972e80947, type: 3}
   Camera: {fileID: 0}
@@ -201,5 +203,18 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.49, y: 0.9}
+  m_Size: {x: 0.49, y: 0.68}
   m_EdgeRadius: 0
+--- !u!114 &622796318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011910089565511915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac05f4fa51fbee4ca0ebceef3b43d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2792448478709005286}
   - component: {fileID: 7932603933054685460}
   - component: {fileID: -7714327024608864216}
+  - component: {fileID: -1895847027868289400}
   m_Layer: 5
   m_Name: RessurectParticle
   m_TagString: Untagged
@@ -116,3 +117,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1895847027868289400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2792448478709005283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac05f4fa51fbee4ca0ebceef3b43d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
