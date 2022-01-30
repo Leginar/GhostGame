@@ -47,6 +47,9 @@ TagManager:
   - name: AboveGround
     uniqueID: 4099866589
     locked: 0
+  - name: Wipe
+    uniqueID: 2995345579
+    locked: 0
   - name: Character
     uniqueID: 3450825883
     locked: 0

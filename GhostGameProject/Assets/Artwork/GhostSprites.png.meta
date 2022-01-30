@@ -295,7 +295,7 @@ TextureImporter:
     second: GhostBuddy_Front_1
   - first:
       213: -640129085809041724
-    second: Collision_Box
+    second: GhostSprites_97
   - first:
       213: -7324329603581330712
     second: Wall_GW_L_Middle
@@ -2626,11 +2626,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collision_Box
+      name: GhostSprites_97
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 64
+        y: 208
         width: 16
         height: 16
       alignment: 0
