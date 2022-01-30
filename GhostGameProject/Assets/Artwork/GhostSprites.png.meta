@@ -295,7 +295,7 @@ TextureImporter:
     second: GhostBuddy_Front_1
   - first:
       213: -640129085809041724
-    second: GhostSprites_97
+    second: Collision_Box
   - first:
       213: -7324329603581330712
     second: Wall_GW_L_Middle
@@ -2591,6 +2591,27 @@ TextureImporter:
       bones: []
       spriteID: 9c774c42f8454ee70800000000000000
       internalID: 9143526117242861513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collision_Box
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ced4fdecfdcd17f0800000000000000
+      internalID: -640129085809041724
       vertices: []
       indices: 
       edges: []
