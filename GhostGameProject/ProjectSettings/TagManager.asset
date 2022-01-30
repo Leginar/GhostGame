@@ -62,3 +62,6 @@ TagManager:
   - name: DeathTouch
     uniqueID: 536659903
     locked: 0
+  - name: Collectable
+    uniqueID: 3124439297
+    locked: 0

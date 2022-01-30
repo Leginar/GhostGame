@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Ghost : Collectable
 {
-    protected override void OnCollide(Collider2D coll)
+    public Sprite freeGhost;
+    public int ghostAmount = +1;
+    protected override void OnCollect()
     {
-        Debug.Log("You got a ghost!");
+        if (!collected)
+        {
+            collected = true;
+            //GetComponent<SpriteRenderer>().sprite = freeGhost;
+            Debug.Log("You have" + ghostAmount + "ghosts!");
+        } 
     }
 }
