@@ -5,7 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private SpriteRenderer thisRenderer;
+    public ContactFilter2D filter;
     private BoxCollider2D boxCollider;
+    public BoxCollider2D grabCollider;
+    private Collider2D[] hits = new Collider2D[10];
+
+
     private Vector3 moveDelta;
     private RaycastHit2D hit;
     public float stateTimer = 0; // < 0 = moving to death.  > 100 fading to overworld
@@ -149,6 +154,31 @@ public class Player : MonoBehaviour
             }
 
         }
+
+
+        //collision work **************************************************
+        grabCollider.OverlapCollider(filter, hits);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i] == null)
+                continue;
+
+            //CHECK FOR DAMAGE
+            if (hits[i].tag == "Oil") { Debug.Log("You got Oil"); }
+
+            if (hits[i].tag == "Ghost") { 
+                Debug.Log("A Ghost Follows You");
+                hits[i].gameObject.GetComponent<CollectableItem>().Collect();
+            }
+            
+            if (hits[i].tag == "Talisman") { Debug.Log("You got a Talisman"); }
+            
+            if (hits[i].tag == "Hurt") { Die(); }
+
+            //Clean array
+            hits[i] = null;
+        }
+
 
     }
 }
