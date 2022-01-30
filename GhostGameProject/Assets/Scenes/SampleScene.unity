@@ -128,16 +128,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3011910089565511915, guid: db9cab9e6e5d0e84daecc03341edfc27, type: 3}
   m_PrefabInstance: {fileID: 1507544356}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1174991
+--- !u!114 &1174992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174986}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9814bd9a2ec6b140bcbbdb27b4943a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 31c0b17c65d52ec42b3ea50fca2aff4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   filter:
@@ -22050,32 +22050,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &1058473006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058473004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c0b17c65d52ec42b3ea50fca2aff4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
 --- !u!213 &1167301891
 Sprite:
   m_ObjectHideFlags: 0
