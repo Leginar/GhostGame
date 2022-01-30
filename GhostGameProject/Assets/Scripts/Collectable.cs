@@ -9,8 +9,9 @@ public class Collectable : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        if (coll.name == "GhostBuddy")
-            OnCollect();
+        Debug.Log(coll.name);
+        if (coll.name == "GhostBuddy_Front_1")
+        OnCollect();
     }
 
     protected virtual void OnCollect()

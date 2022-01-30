@@ -131,11 +131,11 @@ public class Player : MonoBehaviour
             }
 
 
-            // Make sure we can move in this direction by casing a box there first, if the box
+            // Make sure we can move in this direction by casing a box there first, if the box hits something it returns a value
             hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Character", "Collision"));
             if (hit.collider == null)
             {
-                //Make this thing move
+                //Make this thing move if no value is found
                 transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
             }
 
