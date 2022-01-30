@@ -25,6 +25,23 @@ public class Player : MonoBehaviour
         thisRenderer = GetComponent<SpriteRenderer>();
     }
 
+
+    public void Die()
+    {
+        if (transitionState == 0 && world == 1)
+        {
+            transitionState = 1;
+            stateTimer = -1;
+            GameObject tempParticle = Instantiate(DeathParticleEffect);
+            tempParticle.transform.position = transform.position;
+            GameObject tempCorpse = Instantiate(CorpseDrop);
+            tempCorpse.transform.position = transform.position;
+            Camera.GetComponent<WorldSwitch>().TeleportDeadworld();
+            transform.Translate(+30, 0, 0);
+        }
+    }
+
+
     private void FixedUpdate()
     {
 
@@ -41,17 +58,7 @@ public class Player : MonoBehaviour
 
         //check death button
 
-        if (Input.GetButton("Fire1") && transitionState == 0 && world == 1)
-        {
-            transitionState = 1;
-            stateTimer = -1;
-            GameObject tempParticle = Instantiate(DeathParticleEffect);
-            tempParticle.transform.position = transform.position;
-            GameObject tempCorpse = Instantiate(CorpseDrop);
-            tempCorpse.transform.position = transform.position;
-            Camera.GetComponent<WorldSwitch>().TeleportDeadworld();
-            transform.Translate(+30, 0, 0);
-        }
+        
 
         //check ressurect button
 

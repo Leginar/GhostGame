@@ -154,6 +154,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  player: {fileID: 1174986}
 --- !u!114 &56594814
 MonoBehaviour:
   m_ObjectHideFlags: 0

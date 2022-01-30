@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class DeathTouch : Collidable
 {
+
+    public GameObject player;
+
+
     protected override void OnCollide(Collider2D coll)
     {
-        if(coll.name == "TrainSprite")
-        Debug.Log("Dead");
+        if (coll.name == "TrainSprite")
+            player.GetComponent<Player>().Die();
     }
 }
